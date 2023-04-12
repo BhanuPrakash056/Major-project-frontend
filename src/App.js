@@ -7,6 +7,8 @@ import Login from './components/Login/Login';
 import NavBar from './components/NavBar';
 import AfterLogin from './components/AfterLogin';
 import Learning from './components/Learning';
+import Crop from './components/Crop';
+import Fertilizer from './components/Fertilizer';
 import './App.scss'
 import Signup from './components/Signup/Signup';
 function App() {
@@ -22,6 +24,9 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/home' element={<AfterLogin />} />
         <Route path='/learning' element={<Learning />} />
+        <Route path='/crop' element={<Crop />} />
+        <Route path='/fertifier' element={<Fertilizer />} />
+
         
       </Routes>
     </section>

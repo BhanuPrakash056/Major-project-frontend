@@ -10,7 +10,7 @@ function AfterLogin() {
   <br/>
   <CardGroup>
   <Card >
-    <Card.Img variant="top" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.syngenta-us.com%2Fthrive%2Fresearch%2Ffuture-of-farming.html&psig=AOvVaw0QaPUIKc5jN-Tqpr7kwFWg&ust=1681380232712000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNC9ys2LpP4CFQAAAAAdAAAAABAE" />
+    <Card.Img variant="top" src="https://img.freepik.com/free-vector/open-automation-architecture-abstract-concept-illustration_335657-3802.jpg?size=626&ext=jpg" />
     <Card.Body>
       <Card.Title>Prediction </Card.Title>
       <Card.Text>
@@ -22,7 +22,7 @@ function AfterLogin() {
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img variant="top" src="https://img.freepik.com/free-vector/course-app-concept-illustration_114360-6219.jpg?w=1800&t=st=1681309230~exp=1681309830~hmac=6e6c7c76a34b440b20a8d5734120ebe0b777977398906caaed5dde8092476ed1s" />
     <Card.Body>
       <Card.Title>E-learning</Card.Title>
       <Card.Text>
@@ -34,7 +34,7 @@ function AfterLogin() {
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img variant="top" src="https://img.freepik.com/premium-vector/organic-farm-products-flat-concept-icon-markers-market-stall-sticker-clipart-summer-outdoor-store-with-eco-vegetables-agriculture-farming-isolated-cartoon-illustration-white_151150-1050.jpg?w=1800" />
     <Card.Body>
       <Card.Title>Market Place</Card.Title>
       <Card.Text>
@@ -46,7 +46,7 @@ function AfterLogin() {
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/01_Icon-Community%402x.png" />
     <Card.Body>
       <Card.Title>Community</Card.Title>
       <Card.Text>
