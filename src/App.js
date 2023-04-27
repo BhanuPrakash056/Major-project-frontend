@@ -11,6 +11,7 @@ import Crop from './components/Crop';
 import Fertilizer from './components/Fertilizer';
 import './App.scss'
 import Signup from './components/Signup/Signup';
+import Community from './components/Community';
 function App() {
   return (
     <section className='container'>
@@ -26,6 +27,7 @@ function App() {
         <Route path='/learning' element={<Learning />} />
         <Route path='/crop' element={<Crop />} />
         <Route path='/fertifier' element={<Fertilizer />} />
+        <Route path='/community' element={<Community />} />
 
         
       </Routes>
