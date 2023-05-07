@@ -54,7 +54,7 @@ function AfterLogin() {
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-    <a href="#" class="btn btn-primary  active" role="button" aria-pressed="true">click here</a>
+    <a href="/community" class="btn btn-primary  active" role="button" aria-pressed="true">click here</a>
     </Card.Footer>
   </Card>
 </CardGroup>
