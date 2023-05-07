@@ -8,12 +8,13 @@ import axios from "axios";
 
 function Community() {
   const [data, setData] = useState(null);
-  const sendQuestion = async (e) => {
+  const [question,setQuestion] = useState("");
+  const viewQuestion = async (e) => {
     try {
       e.preventDefault();
       <h1>The question are </h1>;
       const response = await axios.get(
-        "http://127.0.0.1:3000/api/viewQuestion"
+        "http://127.0.0.1:5000/api/viewQuestion"
       );
       setData(response.data.data);
       console.log(data);
@@ -22,39 +23,41 @@ function Community() {
     }
   };
 
-  function addQuestion() {
-    try {
-      axios({
-        method: "post",
-        url: "http://127.0.0.1:3000/api/addQuestion",
-        data: {
-          questionName: "panda is beauty",
-          questionUrl: "",
-          allAnswers: [],
-        },
-      });
-    } catch (error) {
-      console.log(error);
-    }
+  const addQuestion = (e) => {
+    e.preventDefault();
+    if(question){
+    axios.post("http://127.0.0.1:5000/api/addQuestion",  {questionName:question} )
+    .then((response) => {
+      console.log(response.data);
+      setQuestion('');
+      viewQuestion();
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  }
+  }
+  const handleChange = (e) =>{
+    setQuestion(e.target.value);
   }
   return (
     <>
-      <Form>
+      <Form onSubmit={addQuestion}>
         <h1>Community</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Enter the Question</Form.Label>
-          <Form.Control type="text" placeholder="Enter The Question" />
-          <Form.Text className="text"></Form.Text>
+          <Form.Label>Ask your Questions here</Form.Label>
+          <Form.Control type="text" placeholder="Enter The Question" value={question} onChange ={handleChange} />
+          <Form.Text className="text" ></Form.Text>
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={(e) => addQuestion()}>
+        <Button variant="primary" type="submit" className="addQuestion">
           Add Question
         </Button>
         <Button
           variant="primary"
           type="submit"
-          onClick={(e) => sendQuestion(e)}
+          onClick={(e) => viewQuestion(e)}
         >
-          View Question
+          View Questions
         </Button>
       </Form>
 
@@ -67,7 +70,7 @@ function Community() {
                 <Button
                   variant="outline-secondary"
                   type="submit"
-                  onClick={(e) => sendQuestion(e)}
+                  onClick={(e) => viewQuestion(e)}
                 >
                   View Answer
                 </Button>
